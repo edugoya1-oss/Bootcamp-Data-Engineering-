@@ -38,15 +38,46 @@ Se realizaron:
 - Detección de posibles duplicados y outliers.
 - Comparaciones mediante funciones de ventana.
 
+
 ## Principales hallazgos
 
-- Alquiler: 50,28 % de las propiedades.
-- Venta: 48,42 % de las propiedades.
+El análisis exploratorio se realizó sobre
+1.246.131 registros inmobiliarios.
+
+### Distribución de propiedades
+
+- Alquiler: 50,28 %.
+- Venta: 48,42 %.
+- Alquiler temporal: 1,17 %.
+
+### Calidad de datos
+
 - Orientación cardinal: 92,50 % de valores nulos.
 - Antigüedad: 99,36 % de registros con valor 999,
   identificado como posible placeholder.
-- 134.227 registros adicionales en grupos con
-  combinaciones repetidas de precio y URL.
+- Precios inválidos: 0,59 %.
+- Superficies totales inválidas: 3,98 %.
+- 134.227 registros adicionales en grupos
+  potencialmente duplicados según precio y URL.
+
+### Evaluación general de calidad
+
+Según los controles definidos en el proyecto:
+
+| Indicador | Resultado |
+|---|---:|
+| Registros válidos | 7.567 (0,61 %) |
+| Registros inválidos | 1.238.564 (99,39 %) |
+
+**Importante:** El elevado porcentaje de
+registros clasificados como inválidos está
+fuertemente relacionado con el valor 999
+en la columna antiguedad.
+
+Esto no significa que el 99,39 % de los registros
+deba eliminarse, ya que muchas propiedades
+pueden conservar información útil en otras variables.
+
 
 ## Próximos pasos
 
